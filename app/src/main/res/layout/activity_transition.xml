@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:motionDebug="SHOW_ALL"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_transition_scene"
+    tools:context=".ConstraintSetActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_smile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/yesil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

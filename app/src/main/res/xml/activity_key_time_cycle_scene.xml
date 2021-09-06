@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="4000">
+        <KeyFrameSet>
+            <KeyCycle
+                motion:motionTarget="@+id/image_right"
+                motion:framePosition="0"
+                motion:wavePeriod="1"
+                android:rotation="90"
+                motion:waveOffset="0" />
+            <KeyTimeCycle
+                motion:motionTarget="@+id/image_left"
+                motion:framePosition="0"
+                motion:wavePeriod="1"
+                android:rotation="90"
+                motion:waveOffset="0" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="100dp"
+            motion:layout_constraintStart_toEndOf="@+id/image_right"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="100dp"
+            android:id="@+id/image_left" />
+        <Constraint
+            android:layout_height="100dp"
+            motion:layout_constraintEnd_toStartOf="@+id/image_left"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="100dp"
+            android:id="@+id/image_right" />
+    </ConstraintSet>
+
+
+</MotionScene>
